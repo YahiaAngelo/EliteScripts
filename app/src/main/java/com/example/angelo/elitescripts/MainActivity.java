@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.jaredrummler.android.shell.CommandResult;
 import com.jaredrummler.android.shell.Shell;
@@ -90,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("isSlkWorking", false);
             editor.putBoolean("isUWorking", false);
             editor.apply();
+            Toast.makeText(this, R.string.chWorkedToast,
+                    Toast.LENGTH_LONG).show();
         }else{
             Log.v("EliteScripts", "Oops, ch script is not working");
             SharedPreferences sharedPref = PreferenceManager
@@ -97,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putBoolean("isChWorking", false);
             editor.apply();
+            Toast.makeText(this, R.string.failedToast,
+                    Toast.LENGTH_LONG).show();
         }
     }
 
@@ -111,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("isSlkWorking", true);
             editor.putBoolean("isUWorking", false);
             editor.apply();
+            Toast.makeText(this, R.string.slkWorkedToast,
+                    Toast.LENGTH_LONG).show();
         }else{
             Log.v("EliteScripts", "Oops, slk scripts is not working");
             SharedPreferences sharedPref = PreferenceManager
@@ -118,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putBoolean("isSlkWorking", false);
             editor.apply();
+            Toast.makeText(this, R.string.failedToast,
+                    Toast.LENGTH_LONG).show();
 
         }
     }
@@ -133,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("isSlkWorking", false);
             editor.putBoolean("isUWorking", true);
             editor.apply();
+            Toast.makeText(this, R.string.uWorkedToast,
+                    Toast.LENGTH_LONG).show();
         }else{
             Log.v("EliteScripts", "Oops, u script is not working");
             SharedPreferences sharedPref = PreferenceManager
@@ -140,6 +151,8 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putBoolean("isUWorking", false);
             editor.apply();
+            Toast.makeText(this, R.string.failedToast,
+                    Toast.LENGTH_LONG).show();
 
         }
 
