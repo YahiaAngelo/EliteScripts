@@ -1,5 +1,8 @@
 package com.example.angelo.elitescripts;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
@@ -7,12 +10,18 @@ public class MyChTileService extends TileService {
 
 
     MainActivity mainActivity = new MainActivity();
+    Context applicationContext = MainActivity.getContextOfApplication();
+
+    SharedPreferences sharedPref = PreferenceManager
+            .getDefaultSharedPreferences(applicationContext);
+    boolean isChWorking = sharedPref.getBoolean("isChWorking", false);
+
     @Override
     public void onClick() {
         super.onClick();
         mainActivity.ch();
 
-        if (mainActivity.isChWorking){
+        if (isChWorking){
            getQsTile().setState(Tile.STATE_ACTIVE);
             getQsTile().updateTile();
         }else {
@@ -24,7 +33,7 @@ public class MyChTileService extends TileService {
     @Override
     public void onTileAdded() {
         super.onTileAdded();
-        if (mainActivity.isChWorking){
+        if (isChWorking){
             getQsTile().setState(Tile.STATE_ACTIVE);
             getQsTile().updateTile();
         }else {
@@ -43,7 +52,7 @@ public class MyChTileService extends TileService {
     @Override
     public void onStartListening() {
         super.onStartListening();
-       if (mainActivity.isChWorking){
+       if (isChWorking){
            getQsTile().setState(Tile.STATE_ACTIVE);
            getQsTile().updateTile();
        }else {

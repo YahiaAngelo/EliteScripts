@@ -1,15 +1,15 @@
 package com.example.angelo.elitescripts;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.jaredrummler.android.shell.CommandResult;
 import com.jaredrummler.android.shell.Shell;
@@ -18,15 +18,22 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-    public boolean isChWorking;
-    public boolean isSlkWorking;
-    public boolean isUWorking;
+
+    public MainActivity activity;
+
+    public static Context contextOfApplication;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_bar_main);
+
+        this.activity = activity;
+        contextOfApplication = getApplicationContext();
+
         try {
             Runtime.getRuntime().exec("su");
         } catch (IOException e) {
@@ -39,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
             ch();
-
             }
         });
 
@@ -77,12 +83,20 @@ public class MainActivity extends AppCompatActivity {
         CommandResult result = Shell.SU.run("sh ./system/refined/ch.sh");
         if (result.isSuccessful()){
             Log.v("EliteScripts", "ch script is working!");
-            isChWorking = true;
-            isSlkWorking = false;
-            isUWorking = false;
+            SharedPreferences sharedPref = PreferenceManager
+                    .getDefaultSharedPreferences(getContextOfApplication());
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("isChWorking", true);
+            editor.putBoolean("isSlkWorking", false);
+            editor.putBoolean("isUWorking", false);
+            editor.apply();
         }else{
             Log.v("EliteScripts", "Oops, ch script is not working");
-            isChWorking = false;
+            SharedPreferences sharedPref = PreferenceManager
+                    .getDefaultSharedPreferences(getContextOfApplication());
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("isChWorking", false);
+            editor.apply();
         }
     }
 
@@ -90,12 +104,21 @@ public class MainActivity extends AppCompatActivity {
         CommandResult result = Shell.SU.run("sh ./system/refined/slk.sh");
         if (result.isSuccessful()){
             Log.v("EliteScripts", "slk script is working!");
-            isSlkWorking = true;
-            isChWorking = false;
-            isUWorking = false;
+            SharedPreferences sharedPref = PreferenceManager
+                    .getDefaultSharedPreferences(getContextOfApplication());
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("isChWorking", false);
+            editor.putBoolean("isSlkWorking", true);
+            editor.putBoolean("isUWorking", false);
+            editor.apply();
         }else{
             Log.v("EliteScripts", "Oops, slk scripts is not working");
-            isSlkWorking = false;
+            SharedPreferences sharedPref = PreferenceManager
+                    .getDefaultSharedPreferences(getContextOfApplication());
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("isSlkWorking", false);
+            editor.apply();
+
         }
     }
 
@@ -103,13 +126,26 @@ public class MainActivity extends AppCompatActivity {
         CommandResult result = Shell.SU.run("sh ./system/refined/u.sh");
         if (result.isSuccessful()){
             Log.v("EliteScripts", "u script is working!");
-            isUWorking = true;
-            isSlkWorking = false;
-            isChWorking = false;
+            SharedPreferences sharedPref = PreferenceManager
+                    .getDefaultSharedPreferences(getContextOfApplication());
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("isChWorking", false);
+            editor.putBoolean("isSlkWorking", false);
+            editor.putBoolean("isUWorking", true);
+            editor.apply();
         }else{
             Log.v("EliteScripts", "Oops, u script is not working");
-            isUWorking = false;
+            SharedPreferences sharedPref = PreferenceManager
+                    .getDefaultSharedPreferences(getContextOfApplication());
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putBoolean("isUWorking", false);
+            editor.apply();
+
         }
 
+    }
+
+    public static Context getContextOfApplication(){
+        return contextOfApplication;
     }
 }

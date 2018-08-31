@@ -1,17 +1,26 @@
 package com.example.angelo.elitescripts;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
 public class MySlkTileService extends TileService {
     MainActivity mainActivity = new MainActivity();
+    Context applicationContext = MainActivity.getContextOfApplication();
+
+    SharedPreferences sharedPref = PreferenceManager
+            .getDefaultSharedPreferences(applicationContext);
+    boolean isSlkWorking = sharedPref.getBoolean("isSlkWorking", false);
+
 
     @Override
     public void onClick() {
         super.onClick();
         mainActivity.slk();
 
-        if (mainActivity.isSlkWorking){
+        if (isSlkWorking){
             getQsTile().setState(Tile.STATE_ACTIVE);
             getQsTile().updateTile();
         }else {
@@ -23,7 +32,7 @@ public class MySlkTileService extends TileService {
     @Override
     public void onTileAdded() {
         super.onTileAdded();
-        if (mainActivity.isSlkWorking){
+        if (isSlkWorking){
             getQsTile().setState(Tile.STATE_ACTIVE);
             getQsTile().updateTile();
         }else {
@@ -42,7 +51,7 @@ public class MySlkTileService extends TileService {
     @Override
     public void onStartListening() {
         super.onStartListening();
-        if (mainActivity.isSlkWorking){
+        if (isSlkWorking){
             getQsTile().setState(Tile.STATE_ACTIVE);
             getQsTile().updateTile();
         }else {

@@ -1,18 +1,25 @@
 package com.example.angelo.elitescripts;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
 public class MyUTileService extends TileService {
     MainActivity mainActivity = new MainActivity();
+    Context applicationContext = MainActivity.getContextOfApplication();
 
+    SharedPreferences sharedPref = PreferenceManager
+            .getDefaultSharedPreferences(applicationContext);
+    boolean isUWorking = sharedPref.getBoolean("isUWorking", false);
 
     @Override
     public void onClick() {
         super.onClick();
         mainActivity.u();
 
-        if (mainActivity.isUWorking){
+        if (isUWorking){
             getQsTile().setState(Tile.STATE_ACTIVE);
             getQsTile().updateTile();
         }else {
@@ -24,7 +31,7 @@ public class MyUTileService extends TileService {
     @Override
     public void onTileAdded() {
         super.onTileAdded();
-        if (mainActivity.isUWorking){
+        if (isUWorking){
             getQsTile().setState(Tile.STATE_ACTIVE);
             getQsTile().updateTile();
         }else {
@@ -43,7 +50,7 @@ public class MyUTileService extends TileService {
     @Override
     public void onStartListening() {
         super.onStartListening();
-        if (mainActivity.isUWorking){
+        if (isUWorking){
             getQsTile().setState(Tile.STATE_ACTIVE);
             getQsTile().updateTile();
         }else {
