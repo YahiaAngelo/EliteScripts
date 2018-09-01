@@ -31,9 +31,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_bar_main);
 
-        startService(new Intent(this, MyApp.class));
-
-
 
         startService(new Intent(this, MyService.class));
 
