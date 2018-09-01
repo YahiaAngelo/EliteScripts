@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Elite Scripts</string>
-    <string name="ch">CH</string>
-    <string name="slk">SLK</string>
-    <string name="U">U</string>
-    <string name="chWorkedToast">CH script applied successfully!</string>
-    <string name="slkWorkedToast">SLK script applied successfully!</string>
-    <string name="uWorkedToast">U script applied successfully!</string>
+    <string name="ch">N910C/H</string>
+    <string name="slk">N91xS/L/K</string>
+    <string name="U">N910U</string>
+    <string name="chWorkedToast">N910C/H script applied successfully!</string>
+    <string name="slkWorkedToast">N91xS/L/K script applied successfully!</string>
+    <string name="uWorkedToast">N910U script applied successfully!</string>
     <string name="ChButton">N910C/H</string>
     <string name="UButton">N910U</string>
     <string name="SlkButton">N910S/L/K\nN915S/L/K\nN916S/L/K</string>
