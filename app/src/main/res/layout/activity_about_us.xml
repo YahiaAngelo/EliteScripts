@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/changelog_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/popupColor"
+    tools:context=".AboutUsActivity">
+    <RelativeLayout
+        android:id="@+id/about_angelo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/angelo_img"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/angelo_icon" />
+
+        <TextView
+            android:id="@+id/angelo_text"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/angelo_img"
+            android:gravity="center_vertical"
+            android:text="Yahia Angelo"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/angelo_text"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/angelo_img"
+            android:textColor="@color/grey"
+            android:text="Elite Scripts App dev."
+
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/about_anan"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/about_angelo"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/anan_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/anan_icon" />
+
+        <TextView
+            android:id="@+id/anan_text"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/anan_img"
+            android:gravity="center_vertical"
+            android:text="Anan"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/anan_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/anan_text"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/anan_img"
+            android:textColor="@color/grey"
+            android:text="Refined Rom Dev."
+
+            android:textSize="12sp" />
+    </RelativeLayout><RelativeLayout
+    android:id="@+id/about_taif"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_below="@id/about_anan"
+    android:layout_marginTop="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/taif_img"
+        android:background="@android:color/transparent"
+        android:src="@drawable/taif_icon" />
+
+    <TextView
+        android:id="@+id/taif_text"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/taif_img"
+        android:gravity="center_vertical"
+        android:text="Taif Aljaloo"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/taif_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taif_text"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/taif_img"
+        android:textColor="@color/grey"
+        android:text="Icons designer."
+
+        android:textSize="12sp" />
+</RelativeLayout>
+</RelativeLayout>

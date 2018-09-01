@@ -6,4 +6,7 @@
     <color name="buttonBackground">#B388FF</color>
     <color name="buttonBackgroundDark">#6200EA</color>
     <color name="activityBackground">#EDE7F6</color>
+    <color name="cardBackground">#311B92</color>
+    <color name="popupColor">#283593</color>
+    <color name="grey">#E0E0E0</color>
 </resources>

@@ -16,12 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InfoActivity">
-        </activity>
+        <activity
+            android:name=".InfoActivity"
+            android:label="@string/info"
+            android:parentActivityName=".MainActivity" />
+
         <service
             android:name=".MyChTileService"
-            android:label="@string/ch"
             android:icon="@drawable/ch_icon"
+            android:label="@string/ch"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
@@ -29,8 +32,8 @@
         </service>
         <service
             android:name=".MySlkTileService"
-            android:label="@string/slk"
             android:icon="@drawable/slk_icon"
+            android:label="@string/slk"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
@@ -38,14 +41,28 @@
         </service>
         <service
             android:name=".MyUTileService"
-            android:label="@string/U"
             android:icon="@drawable/u_icon"
+            android:label="@string/U"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
-    </application>
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".instructionsActivity"
+            android:label="@string/instructions"
+            android:theme="@style/Theme.Overlay" />
+        <activity android:name=".ChangelogActivity" />
+        <activity android:name=".AboutUsActivity"
+            android:label="@string/aboutUs"
+            android:theme="@style/Theme.Overlay">
+
+        </activity>
+    </application>
 
 </manifest>
