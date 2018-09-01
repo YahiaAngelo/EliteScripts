@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_bar_main);
 
+       final SharedPreferences sharedPref = PreferenceManager
+                .getDefaultSharedPreferences(this);
+
         this.activity = activity;
         contextOfApplication = getApplicationContext();
 
@@ -47,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
             ch();
+            boolean isChWorking = sharedPref.getBoolean("isChWorking", false);
+            if (isChWorking){
+                Toast.makeText(contextOfApplication, R.string.chWorkedToast,
+                        Toast.LENGTH_LONG).show();
+            }else {
+                Toast.makeText(contextOfApplication, R.string.failedToast,
+                        Toast.LENGTH_LONG).show();
+            }
             }
         });
 
@@ -57,6 +68,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 slk();
+                boolean isSlkWorking = sharedPref.getBoolean("isSlkWorking", false);
+                if (isSlkWorking){
+                    Toast.makeText(contextOfApplication, R.string.slkWorkedToast,
+                            Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(contextOfApplication, R.string.failedToast,
+                            Toast.LENGTH_LONG).show();
+
+                }
             }
         });
 
@@ -66,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 u();
+                boolean isUWorking = sharedPref.getBoolean("isUWorking", false);
+                if (isUWorking){
+                    Toast.makeText(contextOfApplication, R.string.uWorkedToast,
+                            Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(contextOfApplication, R.string.failedToast,
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -91,8 +119,6 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("isSlkWorking", false);
             editor.putBoolean("isUWorking", false);
             editor.apply();
-            Toast.makeText(this, R.string.chWorkedToast,
-                    Toast.LENGTH_LONG).show();
         }else{
             Log.v("EliteScripts", "Oops, ch script is not working");
             SharedPreferences sharedPref = PreferenceManager
@@ -100,8 +126,6 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putBoolean("isChWorking", false);
             editor.apply();
-            Toast.makeText(this, R.string.failedToast,
-                    Toast.LENGTH_LONG).show();
         }
     }
 
@@ -116,8 +140,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("isSlkWorking", true);
             editor.putBoolean("isUWorking", false);
             editor.apply();
-            Toast.makeText(this, R.string.slkWorkedToast,
-                    Toast.LENGTH_LONG).show();
+
         }else{
             Log.v("EliteScripts", "Oops, slk scripts is not working");
             SharedPreferences sharedPref = PreferenceManager
@@ -125,8 +148,6 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putBoolean("isSlkWorking", false);
             editor.apply();
-            Toast.makeText(this, R.string.failedToast,
-                    Toast.LENGTH_LONG).show();
 
         }
     }
@@ -142,8 +163,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("isSlkWorking", false);
             editor.putBoolean("isUWorking", true);
             editor.apply();
-            Toast.makeText(this, R.string.uWorkedToast,
-                    Toast.LENGTH_LONG).show();
+
         }else{
             Log.v("EliteScripts", "Oops, u script is not working");
             SharedPreferences sharedPref = PreferenceManager
@@ -151,8 +171,6 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putBoolean("isUWorking", false);
             editor.apply();
-            Toast.makeText(this, R.string.failedToast,
-                    Toast.LENGTH_LONG).show();
 
         }
 
