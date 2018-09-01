@@ -17,6 +17,8 @@ import com.jaredrummler.android.shell.Shell;
 
 import java.io.IOException;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -24,15 +26,18 @@ public class MainActivity extends AppCompatActivity {
 
     public static Context contextOfApplication;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_bar_main);
 
-       final SharedPreferences sharedPref = PreferenceManager
+        startService(new Intent(this, MyApp.class));
+
+
+
+        startService(new Intent(this, MyService.class));
+
+        final SharedPreferences sharedPref = PreferenceManager
                 .getDefaultSharedPreferences(this);
 
         this.activity = activity;
@@ -178,5 +183,11 @@ public class MainActivity extends AppCompatActivity {
 
     public static Context getContextOfApplication(){
         return contextOfApplication;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
     }
 }
