@@ -33,7 +33,7 @@
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/angelo_img"
             android:gravity="center_vertical"
-            android:text="Yahia Angelo"
+            android:text="@string/yahia_name"
             android:textSize="14sp" />
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/angelo_img"
             android:textColor="@color/grey"
-            android:text="Elite Scripts App dev."
+            android:text="@string/yahia_desc"
 
             android:textSize="12sp" />
     </RelativeLayout>
@@ -75,7 +75,7 @@
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/anan_img"
             android:gravity="center_vertical"
-            android:text="Anan"
+            android:text="@string/anan_name"
             android:textSize="14sp" />
 
         <TextView
@@ -86,7 +86,7 @@
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/anan_img"
             android:textColor="@color/grey"
-            android:text="Refined Rom Dev."
+            android:text="@string/anan_desc"
 
             android:textSize="12sp" />
     </RelativeLayout><RelativeLayout
@@ -116,7 +116,7 @@
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/taif_img"
         android:gravity="center_vertical"
-        android:text="Taif Aljaloo"
+        android:text="@string/taif_name"
         android:textSize="14sp" />
 
     <TextView
@@ -127,7 +127,7 @@
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/taif_img"
         android:textColor="@color/grey"
-        android:text="Icons designer."
+        android:text="@string/taif_desc"
 
         android:textSize="12sp" />
 </RelativeLayout>
