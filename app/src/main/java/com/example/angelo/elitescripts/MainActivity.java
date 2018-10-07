@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.app_bar_main);
 
 
-        startService(new Intent(this, MyService.class));
-
         final SharedPreferences sharedPref = PreferenceManager
                 .getDefaultSharedPreferences(this);
 
