@@ -6,21 +6,33 @@
     <string name="chWorkedToast">N910C/H script applied successfully!</string>
     <string name="slkWorkedToast">N91xS/L/K script applied successfully!</string>
     <string name="uWorkedToast">N910U script applied successfully!</string>
+	<string name="failedToast">Something went wrong!</string>
     <string name="ChButton">N910C/H</string>
     <string name="UButton">N910U</string>
     <string name="SlkButton">N910S/L/K\nN915S/L/K\nN916S/L/K</string>
-    <string name="info">Info</string>
     <string name="instructions">Instructions</string>
     <string name="aboutUs">About Us</string>
 
-    <string name="failedToast">Something went wrong!</string>
-
+    <string name="info">Info</string>
     <string name="infoText">
         What does this app do and how to use it: \n
-        "This app is designed to allow you to fix Audio issues with RefinedNougat ROM, ON THE FLY without the need of a ZIP or a reboot\n\nQS TOGGLES \n\nS/L/K\nC/H \nU \n \nAPP\n\nC/H \n- Working N910C/H Calls \n- Working 3RD Party recording apps \n- No Bluetooth audio \n \nS/L/K \n- Working S/L/K Calls \n- No 3RD Party recording apps \n- Working Bluetooth Audio \n \nU \n- Working N910U Calls \n- No 3RD Party recording apps \n- Working Bluetooth Audio \n
+        "This app is designed to allow you to fix Audio issues with RefinedNougat ROM, ON THE FLY without the need of a ZIP or a reboot\n\nQS TOGGLES \n\nS/L/K\nC/H \nU \n \nAPP\n\nC/H \n- Working N910C/H Calls \n- Working 3RD Party recording apps \n- NO Bluetooth audio \n \nS/L/K \n- Working S/L/K Calls \n- NO 3RD Party recording apps \n- Working Bluetooth Audio \n \nU \n- Working N910U Calls \n- NO 3RD Party recording apps \n- Working Bluetooth Audio \n
     </string>
+	
+	<string name="changelog">Change Log</string> 
+    <string name="changlogText">v1.0.1 - Added Multi-Language support \n
+		- Turkish translations added. \n
+		- Missing strings multi-Language supports added. \n
+		v1.0 - Initial Release \n
+		- App first initial version.
+	</string>
 
-    <string name="changlogText">Initial release</string>
-
-
+	<string name="source_code">Source Code</string>
+	<string name="donation">Donate</string>
+	<string name="yahia_name">Yahia Angelo</string>
+	<string name="yahia_desc">Elite Scripts App Developer</string>
+	<string name="anan_name">Anan</string>
+	<string name="anan_desc">Refined ROM Developer</string>
+	<string name="taif_name">Taif Aljaloo</string>
+	<string name="taif_desc">Icon Designer</string>
 </resources>

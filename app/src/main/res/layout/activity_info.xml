@@ -65,7 +65,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Instructions"
+                    android:text="@string/instructions"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -95,7 +95,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Changelog"
+                    android:text="@string/changelog"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -125,7 +125,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Source code"
+                    android:text="@string/source_code"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -170,7 +170,7 @@
                    android:layout_marginLeft="16dp"
                    android:layout_weight="1"
                    android:gravity="center_vertical"
-                   android:text="Donation"
+                   android:text="@string/donation"
                    android:textSize="14sp" />
            </LinearLayout>
 
@@ -200,7 +200,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="About Us"
+                android:text="@string/aboutUs"
                 android:textSize="14sp" />
         </LinearLayout>
        </RelativeLayout>

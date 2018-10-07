@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Elite Scripts</string>
+    <string name="ch">N910C/H</string>
+    <string name="slk">N91xS/L/K</string>
+    <string name="U">N910U</string>
+    <string name="chWorkedToast">N910C/H ses yaması başarıyla uygulandı!</string>
+    <string name="slkWorkedToast">N91xS/L/K ses yaması başarıyla uygulandı!</string>
+    <string name="uWorkedToast">N910U sses yaması başarıyla uygulandı!</string>
+	<string name="failedToast">Bir şeyler ters gitti!</string>
+    <string name="ChButton">N910C/H</string>
+    <string name="UButton">N910U</string>
+    <string name="SlkButton">N910S/L/K\nN915S/L/K\nN916S/L/K</string>
+    <string name="instructions">Nasıl Kullanılır?</string>
+    <string name="aboutUs">Hakkımızda</string>
+
+    <string name="info">Bilgi</string>
+    <string name="infoText">
+        Bu uygulama ne yapar ve nasıl kullanılır? \n
+        "Bu uygulama RefinedNougat için tasarlanmış olup ROM'un ses sorunu ile ilgili yamaları arasında herhangi bir ZIP dosyası yüklemeden veya telefonu yeniden başlatmadan TELEFON NORMAL HALİNDE ÇALIŞIRKEN geçiş yapmak için hazırlanmıştır. \n\nHızlı Erişim Kısayolu \n\nS/L/K\nC/H \nU \n \nUygulama\n\nC/H \n- N910C/H sürümleri için aramalar sorunsuzca çalışır \n- 3. Parti ses kayıt uygulamaları sorunsuzca çalışır \n- Bluetooth üzerinden ses oynatma çalışMAZ \n \nS/L/K \n- S/L/K sürümleri için aramalar sorunsuzca çalışır \n- 3. Parti ses kayıt uygulamaları çalışMAZ \n- Bluetooth üzerinden ses oynatma sorunsuzca çalışır \n \nU \n- N910U sürümü için aramalar sorunsuca çalışır \n- 3. Parti ses kayıt uygulamaları çalışMAZ \n- Bluetooth üzerinden ses oynatma sorunsuzca çalışır  \n
+    </string>
+
+	<string name="changelog">Değişiklik Listesi</string> 
+    <string name="changlogText">v1.0.1 - Çoklu Dil desteği eklendi \n
+		- Türkçe dil paketi eklendi. \n
+		- Eksik olan metinlere çoklu dil desteği eklendi. \n
+		v1.0 - İlk Sürüm \n
+		- Uygulamanın yayınlanan ilk sürümü.
+	</string>
+
+	<string name="source_code">Kaynak Kodu</string>
+	<string name="donation">Bağış</string>
+	<string name="yahia_name">Yahia Angelo</string>
+	<string name="yahia_desc">Elite Scripts Uygulamasının Geliştiricisi</string>
+	<string name="anan_name">Anan</string>
+	<string name="anan_desc">RefinedNougat ROM'unun Geliştiricisi</string>
+	<string name="taif_name">Taif Aljaloo</string>
+	<string name="taif_desc">Simge Tasarımcısı</string>
+	
+	<string name="Test">a</string>
+</resources>
